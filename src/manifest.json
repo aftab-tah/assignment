@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Auto Connector",
+    "description": "Automatically sends connection requests to all profiles on LinkedIn's My Network page.",
+    "version": "1.0",
+    "permissions": ["activeTab", "scripting"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/mynetwork/grow/"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
+  
